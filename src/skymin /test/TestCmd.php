@@ -11,7 +11,7 @@ class TestCmd extends BaseCommand{
 	
 	public function __construct(){
 		parent::__construct('test');
-		$this->addParameter(EnumFactory::create('pos', Enumtype::TARGET(),[], true));
+		$this->addParameter(EnumFactory::create('pos', Enumtype::TARGET(), null, true));
 		$this->addParameter(EnumFactory::create('test', 'test', ['t', 'e', 's', 't']));
 	}
 	
