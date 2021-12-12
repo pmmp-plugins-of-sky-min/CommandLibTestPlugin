@@ -5,7 +5,7 @@ namespace skymin\test;
 
 use pocketmine\command\CommandSender;
 
-use skymin\CommandLib\command\{BaseCommand, EnumFactory, EnumType};
+use skymin\CommandLib\{BaseCommand, EnumFactory, EnumType};
 
 class TestCmd extends BaseCommand{
 	
