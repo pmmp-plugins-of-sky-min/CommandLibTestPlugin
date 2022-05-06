@@ -5,14 +5,14 @@ namespace skymin\test;
 
 use pocketmine\command\CommandSender;
 
-use skymin\CommandLib\{BaseCommand, EnumFactory, EnumType};
+use skymin\CommandLib\{BaseCommand, Parameter, EnumType};
 
 class TestCmd extends BaseCommand{
 	
 	public function __construct(){
 		parent::__construct('test');
-		$this->addParameter(EnumFactory::create('pos', Enumtype::TARGET(), null, true));
-		$this->addParameter(EnumFactory::create('test', 'test', ['t', 'e', 's', 't']));
+		$this->addParameter(Parameter::create('pos', Enumtype::TARGET(), null, true));
+		$this->addParameter(Parameter::create('test', 'test', ['t', 'e', 's', 't']));
 	}
 	
 	public function execute(CommandSender $sender, string $commandLabel, array $args) :void{
